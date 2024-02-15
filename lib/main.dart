@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorial/box/product_box.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   //This widget is root for your application
   @override
   Widget build(BuildContext context) {
@@ -12,13 +14,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightBlue
       ),
-      home: MyHomePage(title: 'Home Page'),
+      home: const MyHomePage(title: 'Home Page'),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -29,7 +31,7 @@ class MyHomePage extends StatelessWidget {
       ),
       body: ListView(
         shrinkWrap: true, padding: const EdgeInsets.fromLTRB(2.0, 10.0, 2.0, 10.0),
-        children: <Widget>[
+        children: const <Widget>[
           ProductBox(
             name: 'HP1',
             description: 'barang hp1',
